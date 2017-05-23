@@ -1,0 +1,76 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<html lang="{{ site.lang | default: "fi-FI" }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ '/assets/js/script.js' | relative_url }}"></script>
+
+  <title>{{ site.title | default: site.github.repository_name }}</title>
+  <meta name="description" content="{{ site.description | default: site.github.project_tagline }}">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="white media" >
+      <a href="/">
+          <img src="{{ 'assets/images/logo.png' | relative_url }}" width="20%" class="logo" />
+      </a>
+      <nav id="navigation" class="media">
+        <ul>
+          <li><a href="/hacklab">HACKLAB</a></li>
+          <li><a href="/saannot">SÄÄNNÖT</a></li>
+          <li><a href="/blogi">BLOGI</a></li>
+          <li><a href="/kerhot">KERHOT</a></li>
+            <li><a href="/tapahtumat">TAPAHTUMAT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="container">
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <span style="float: right">Viimeksi päivitetty: {{ page.last_modified_at }}</span>
+          {{ page.title }}
+        </div>
+        <span class="blc"></span><span class="brc"></span>
+        </div>
+        <article class="markdown-body">
+          {{ content }}
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+        Viimeksi päivitetty: {{ page.last_modified_at }}
+        <span class="tlc"></span><span class="trc"></span>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <div class="inner">
+        <p class="name"></p>
+    </div>
+    <span class="blc"></span><span class="brc"></span>
+  </div>
+
+  {% if site.google_analytics %}
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+  {% endif %}
+</body>
+</html>
