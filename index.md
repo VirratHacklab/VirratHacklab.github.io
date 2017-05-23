@@ -5,7 +5,11 @@ title: Ajankohtaista
 
 ## [](#header-2)Uusimmat tapahtumat
 
-Tulossa
+{% for post in site.posts %}
+    {% if post.categories contains 'event' %}
+* [{{ post.title }}]({{ post.url }})
+    {% endif %}
+{% endfor %}
 
 ## [](#header-2)Uusimmat blogikirjoitukset
 
