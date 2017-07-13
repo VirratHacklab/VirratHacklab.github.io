@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+        <link rel="stylesheet" href="{{ '/assets/css/reset.css?v=' | append: site.github.build_revision | relative_url }}">
         <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="{{ '/assets/js/script.js' | relative_url }}"></script>
@@ -19,25 +20,21 @@
 
     <body>
         <div class="wrapper">
-            <header class="white media" >
-                <a href="/">
-                    <img src="{{ 'assets/images/logo.png' | relative_url }}" width="20%" class="logo" />
+            <header class="white media">
+                <a class="button join" href="/liity">
+                    LIITY TAI TUE!
                 </a>
-                <nav id="navigation" class="media">
-                    <ul>
-                        <li><a href="/hacklab">HACKLAB</a></li>
-                        <li><a href="/saannot">SÄÄNNÖT</a></li>
-                        <li><a href="/blogi">BLOGI</a></li>
-                        <li><a href="/kerhot">KERHOT</a></li>
-                        <li><a href="/tapahtumat">TAPAHTUMAT</a></li>
-                    </ul>
-                </nav>
+                <a class="menulink" href="#navigation">
+                    <div class="hamburger"></div>
+                </a>
+                <a href="/">
+                    <img src="{{ 'assets/images/logo.png' | relative_url }}" class="logo" />
+                </a>
             </header>
             <div id="container">
                 <div id="main" role="main">
                     <div class="download-bar">
                         <div class="inner">
-                            <span style="float: right">Viimeksi päivitetty: {{ page.last_modified_at }}</span>
                             {{ page.title }}
                         </div>
                         <span class="blc"></span><span class="brc"></span>
@@ -49,9 +46,19 @@
             </div>
             <footer>
                 <div class="owner">
-                    Viimeksi päivitetty: {{ page.last_modified_at }}
+                    &nbsp;
+                    <a class="toplink" href="#top"></a>
                     <span class="tlc"></span><span class="trc"></span>
                 </div>
+                <nav id="navigation" class="media">
+                    <ul>
+                        <li><a href="/hacklab">HACKLAB</a></li>
+                        <li><a href="/saannot">SÄÄNNÖT</a></li>
+                        <li><a href="/blogi">BLOGI</a></li>
+                        <li><a href="/kerhot">KERHOT</a></li>
+                        <li><a href="/tapahtumat">TAPAHTUMAT</a></li>
+                    </ul>
+                </nav>
             </footer>
         </div>
         <div class="current-section">

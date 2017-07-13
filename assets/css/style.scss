@@ -2,12 +2,31 @@
 ---
 
 @import "{{ site.theme }}";
-
+body {
+  background-image: url(../images/wallpaper.jpg);
+  bacground-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 16px;
+}
 a {
   color: #0383CD;
 }
 a:hover {
   color: #9ed4ee;
+}
+
+a.button {
+  display: inline-block;
+  padding: 0.5em 0.875em;
+  background-color: #0383CD;
+  border-radius: 1px;
+  color: #fafafa;
+}
+
+.wrapper {
+  position: relative;
 }
 
 #container {
@@ -27,11 +46,64 @@ a:hover {
 header.white {
   background-color: white;
   padding: 16px;
+  text-align: center;
+}
+
+.join {
+  margin: 1.25em;
 }
 
 .logo {
   float: left;
   margin-left: 8px;
+  width: 20%;
+}
+
+.menulink {
+  position: relative;
+  display: none;
+  text-align: left;
+  float: right;
+  padding: 1.25em 0.5em;
+  border: 1px solid #0383CD;
+  border-radius: 1px;
+  margin: 0.5em 0;
+  border-bottom-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+}
+.menulink:after {
+  text-align: center;
+  font-size: 0.5em;
+  position: absolute;
+  content: 'VALIKKO';
+  bottom: -2.25em;
+}
+
+
+.hamburger {
+  position: relative;
+  width: 2em;
+  height: 0.25em;
+  border-radius: 1px;
+  background-color: #0383CD;
+}
+.hamburger:before {
+  position: absolute;
+  content: '';
+  width: 2em;
+  height: 0.25em;
+  border-radius: 1px;
+  background-color: #0383CD;
+  margin-top: -0.5em;
+}
+.hamburger:after {
+  position: absolute;
+  content: '';
+  width: 2em;
+  height: 0.25em;
+  border-radius: 1px;
+  background-color: #0383CD;
+  margin-top: 0.5em;
 }
 
 #navigation {
@@ -52,7 +124,7 @@ header.white {
 }
 
 .download-bar .brc {
-  border: 10px solid #0679c0;
+  border: 10px solid;
   border-color: #0679c0 transparent transparent;
   width: 0;
   height: 0;
@@ -79,6 +151,12 @@ header.white {
   background-color: #9ed4ee;
 }
 
+.current-section a {
+  background: transparent url(../images/ion-arrow-up.png) no-repeat 0 0;
+  background-size: 20px;
+  opacity: 1;
+}
+
 .current-section .name {
   font-size: 18px;
   padding: 8px 12px;
@@ -86,7 +164,7 @@ header.white {
 }
 
 .current-section .blc {
-  border: 10px solid black;
+  border: 10px solid;
   border-color: transparent transparent #0679c0;
   height: 0;
   display: block;
@@ -99,7 +177,7 @@ header.white {
 }
 
 .current-section .trc {
-  border: 10px solid black;
+  border: 10px solid;
   border-color: #0679c0 transparent transparent;
   width: 0;
   height: 0;
@@ -113,7 +191,7 @@ header.white {
 }
 
 .current-section .brc {
-  border: 10px solid black;
+  border: 10px solid;
   border-color: #0679c0 transparent transparent;
   width: 0;
   height: 0;
@@ -127,7 +205,7 @@ header.white {
 }
 
 .markdown-body {
-  padding: 0 20px 60px;
+  padding: 0 1em 4em;
 }
 
 .markdown-body pre {
@@ -136,6 +214,9 @@ header.white {
 
 .markdown-body table {
   width: 675px;
+}
+.markdown-body li {
+  margin-bottom: 0.25em;
 }
 
 .highlighter-rouge {
@@ -151,9 +232,18 @@ footer .owner {
   color: black;
 }
 
+.owner a {
+  float: right;
+  text-indent: -10000px;
+  background: transparent url(../images/ion-arrow-up.png) no-repeat 0 0;
+  background-size: 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+}
 
 .owner .trc {
-  border: 10px solid black;
+  border: 10px solid;
   border-color: #0679c0 transparent transparent;
   width: 0;
   height: 0;
@@ -167,7 +257,7 @@ footer .owner {
 }
 
 .owner .tlc {
-  border: 10px solid black;
+  border: 10px solid;
   border-color: #0679c0 transparent transparent;
   width: 0;
   height: 0;
@@ -178,4 +268,127 @@ footer .owner {
   transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);  /* IE9 */
   -webkit-transform: rotate(-45deg); /* 2014 current */
+}
+
+.markdown-body .membership-list {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.membership-list .membership-item {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0.5em;
+  border: 1px dashed #cccccc;
+  padding: 1em 2em;
+  width: 12em;
+}
+
+.membership-item .payment-type {
+  margin: 0 0 1em 0;
+}
+.big-text {
+  font-size: 4em;
+}
+
+@media (max-width:48em) {
+  .wrapper {
+    width: 100%;
+  }
+  header.white {
+    margin: 0.5em 0.5em 0 0.5em;
+  }
+  .join {
+    margin: 0.75em;
+  }
+  #container {
+    margin: 0 0.5em;
+  }
+  #navigation {
+    margin: 0 0.5em;
+  }
+  #navigation ul {
+    margin: 0;
+    padding: 0;
+  }
+  #navigation li {
+    display: block;
+    background-color: white;
+    margin: 1px 0 0 0;
+    padding: 0;
+  }
+  #navigation li a {
+    display: block;
+    padding: 0.5em;
+  }
+  .menulink {
+    display: block;
+  }
+  .logo {
+    margin-left: 0;
+    width: 4.75em;
+  }
+  .download-bar {
+    margin: 0 -0.5em;
+    border: 0;
+  }
+  .current-section .brc,
+  .download-bar .brc {
+    border: 6px solid;
+    border-color: #0679c0 transparent transparent;
+    bottom: -6px;
+    right: 2px;
+  }
+  .current-section .blc,
+  .download-bar .blc {
+    border: 6px solid;
+    border-color: transparent transparent #0679c0;
+    bottom: -6px;
+    left: 2px;
+  }
+  footer .owner {
+    margin: 0;
+    border: 0;
+    padding: 10px;
+  }
+  .owner .trc {
+    border: 6px solid;
+    border-color: #0679c0 transparent transparent;
+    top: -6px;
+    right: 2px;
+  }
+  .owner .tlc {
+    border: 6px solid;
+    border-color: #0679c0 transparent transparent;
+    top: -6px;
+    left: 2px;
+  }
+  .current-section {
+    width: 100%;
+    margin-left: -50%;
+    border: 0;
+  }
+
+  .markdown-body {
+    padding: 0.5em 0.5em 4em;
+  }
+
+  .markdown-body table {
+    width: auto;
+  }
+
+  .membership-list .membership-item {
+    width: 100%;
+    margin: 0.25em 0;
+  }
+
+}
+
+@media (min-width: 48em) {
+  #navigation {
+    position: absolute;
+    top: 2em;
+    left: 10em;
+  }
 }

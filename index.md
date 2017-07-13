@@ -13,8 +13,16 @@ title: Ajankohtaista
 
 ## [](#header-2)Uusimmat blogikirjoitukset
 
-Tulossa
+{% for post in site.posts %}
+    {% if post.categories contains 'blog' %}
+* [{{ post.title }}]({{ post.url }})
+    {% endif %}
+{% endfor %}
 
-## [](#header-2)Ajankohtaiset kerhot
+## [](#header-2)Kerhouutiset
 
-Tulossa
+{% for post in site.posts %}
+    {% if post.categories contains 'club' %}
+* [{{ post.title }}]({{ post.url }})
+    {% endif %}
+{% endfor %}
