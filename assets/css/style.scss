@@ -4,7 +4,7 @@
 @import "{{ site.theme }}";
 body {
   background-image: url(../images/wallpaper.jpg);
-  bacground-position: center;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -146,7 +146,8 @@ header.white {
 
 .current-section {
   top: 8px;
-  width: 695px;
+  width: 705px;
+  margin-left: -353px;
   border-color: #9ed4ee;
   background-color: #9ed4ee;
 }
@@ -226,7 +227,7 @@ header.white {
 
 footer .owner {
   position: relative;
-  margin: -67px -15px 35px;
+  margin: -67px -15px 0px;
   border-color: #9ed4ee;
   background-color: #9ed4ee;
   color: black;
@@ -268,6 +269,16 @@ footer .owner {
   transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);  /* IE9 */
   -webkit-transform: rotate(-45deg); /* 2014 current */
+}
+
+#social {
+  text-align: center;
+  background-color: white;
+}
+
+#social li {
+  display: inline-block;
+  margin: 1em 0.5em;
 }
 
 .markdown-body .membership-list {
@@ -363,6 +374,9 @@ footer .owner {
     border-color: #0679c0 transparent transparent;
     top: -6px;
     left: 2px;
+  }
+  #social {
+    margin: 1px 0.5em 0;
   }
   .current-section {
     width: 100%;

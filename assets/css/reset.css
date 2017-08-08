@@ -112,23 +112,3 @@ a {
 .icon-office.green {
     color: #2ECC40;
 }
-
-/* font: Sanchez-Regular */
-@font-face {
-    font-family: 'Sanchez-Regular';
-    src: url('/fonts/Sanchez/320203_1_0.eot');
-    src: url('/fonts/Sanchez/320203_1_0.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/Sanchez/320203_1_0.woff2') format('woff2'),
-    url('/fonts/Sanchez/320203_1_0.woff') format('woff'),
-    url('/fonts/Sanchez/320203_1_0.ttf') format('truetype');
-}
-/* font: Sanchez-Italic */
-@font-face {
-    font-family: 'Sanchez-RegularItalic';
-    src: url('/fonts/Sanchez/320203_0_0.eot');
-    src: url('/fonts/Sanchez/320203_0_0.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/Sanchez/320203_0_0.woff2') format('woff2'),
-    url('/fonts/Sanchez/320203_0_0.woff') format('woff'),
-    url('/fonts/Sanchez/320203_0_0.ttf') format('truetype');
-}
-

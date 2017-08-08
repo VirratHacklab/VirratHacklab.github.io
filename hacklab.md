@@ -3,10 +3,10 @@ layout: hacklab
 title: Tervetuloa Hacklabiin!
 ---
 
-Hacklab sijaitsee Virroilla Tredun tiloissa osoitteessa Sipiläntie 1.
+Hacklab sijaitsee Virroilla Tredun tiloissa osoitteessa Sipiläntie 1, pohjakerroksessa. 
 
-#### [](#header-4)Hacklabilta löytyvät laitteet
+Yhdistys aloittaa toimintansa tiloissa syksyllä ja toiminnan kehittymisestä tullaan tiedottamaan jatkossa 
+ilmoitustauluilla ja Facebookissa.
 
-*   3D-tulostin
-*   Brodeerauskone
-*   Laserkaiverrin
+Tälle sivulle tullaan jatkossa lisäämään tietoa siitä, mitä laitteistoa Hacklabiltä löytyy ja mitä ollaan hankkimassa. 
+Keräämme tänne myös käyttö- ja turvallisuusohjeita laitteistosta.

@@ -6,22 +6,29 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+        <link rel="shortcut icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+
         <link rel="stylesheet" href="{{ '/assets/css/reset.css?v=' | append: site.github.build_revision | relative_url }}">
         <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="{{ '/assets/js/script.js' | relative_url }}"></script>
 
-        <title>{{ site.title | default: site.github.repository_name }}</title>
-        <meta name="description" content="{{ site.description | default: site.github.project_tagline }}">
-
+        <title>{{ page.title | default: site.title }}</title>
+        <meta name="description" content="{{ page.description | default: site.description }}">
         <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta property="og:image" content="https://virrat.hacklab.fi/assets/images/share_logo.png" />
+        <meta property="og:title" content="{{ page.title | default: site.title }}" />
+        <meta property="og:url" content="{{ page.url | prepend: 'https://virrat.hacklab.fi' }}" />
+        <meta property="og:site_name" content="Virrat Hacklab" />
+        <meta property="og:type" content="article" />
 
     </head>
 
     <body>
         <div class="wrapper">
             <header class="white media">
-                <a class="button join" href="/liity">
+                <a class="button join" href="/liity.html">
                     LIITY TAI TUE!
                 </a>
                 <a class="menulink" href="#navigation">
@@ -35,6 +42,7 @@
                 <div id="main" role="main">
                     <div class="download-bar">
                         <div class="inner">
+                            <span style="float:right">{{ page.date | date: "%d.%m.%Y %R" }}</span>
                             {{ page.title }}
                         </div>
                         <span class="blc"></span><span class="brc"></span>
@@ -52,13 +60,30 @@
                 </div>
                 <nav id="navigation" class="media">
                     <ul>
-                        <li><a href="/hacklab">HACKLAB</a></li>
-                        <li><a href="/saannot">SÄÄNNÖT</a></li>
-                        <li><a href="/blogi">BLOGI</a></li>
-                        <li><a href="/kerhot">KERHOT</a></li>
-                        <li><a href="/tapahtumat">TAPAHTUMAT</a></li>
+                        <li><a href="/hacklab.html">HACKLAB</a></li>
+                        <li><a href="/saannot.html">SÄÄNNÖT</a></li>
+                        <li><a href="/blogi.html">BLOGI</a></li>
+                        <li><a href="/kerhot.html">KERHOT</a></li>
+                        <li><a href="/tapahtumat.html">TAPAHTUMAT</a></li>
                     </ul>
                 </nav>
+                <ul id="social">
+                    <li>
+                        <a href="https://facebook.com/VirratHacklab/">
+                            <img height="64" src="{{ '/assets/images/fa-facebook.png' | relative_url }}" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/VirratHacklab/">
+                            <img height="64" src="{{ '/assets/images/fa-twitter.png' | relative_url }}" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/VirratHacklab/">
+                            <img height="64" src="{{ '/assets/images/fa-instagram.png' | relative_url }}" />
+                        </a>
+                    </li>
+                </ul>
             </footer>
         </div>
         <div class="current-section">

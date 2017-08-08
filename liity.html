@@ -2,22 +2,36 @@
 layout: hacklab
 title: Liity jäseneksi tai tue toimintaa!
 ---
-<h3>Liity varsinaiseksi jäseneksi</h3>
+
+<h3 class="header-3">Toiminnan tukeminen</h3>
+
+<p>
+    Tällä sivulla voit jatkossa liittyä jäseneksi suoraan maksamalla jäsenmaksun kuukausittain suoraan maksukortilta.
+    Laitamme nämä sivut toimintaan heti, kun toiminta on kunnolla käynnissä. Jos haluat tukea toimintaa jo nyt, liity
+    <a href="(https://www.facebook.com/groups/202668066893777/">Facebook-ryhmään</a> ja kerro halustasi olla mukana!
+</p>
+
+<p>
+    HUOM! Alla olevat maksulinkit eivät vielä toimi vaan ovat siinä odottamassa maksujärjestelmän käyttöönottoa.
+    Otamme kernaasti vastaan palautetta suunnitelluista hinnoista esim. Facebookin kautta.
+</p>
+
+<h3 class="header-3">Liity varsinaiseksi jäseneksi</h3>
 
 <ul class="membership-list">
     <li class="membership-item">
-        <div class="payment-type">Vuosimaksu</div>
-        <div class="big-text">199€ </div>
-        <div class="payment-type">/ vuosi</div>
+        <div class="payment-type">Kuukausimaksu</div>
+        <div class="big-text">15€</div>
+        <div class="payment-type">/ kk</div>
         <form action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
             <script
                 src="https://checkout.stripe.com/checkout.js"
                 class="stripe-button"
                 data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
-                data-amount="19900"
+                data-amount="1500"
                 data-name="Virrat Hacklab"
-                data-description="Vuosimaksu 199€ / vuosi"
-                data-image="https://raw.githubusercontent.com/VirratHacklab/VirratHacklab.github.io/master/assets/images/hacklab_notext_safety_white.png"
+                data-description="Kuukausimaksu 15€ / kk"
+                data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
                 data-locale="fi"
                 data-zip-code="true"
                 data-currency="eur"
@@ -26,72 +40,11 @@ title: Liity jäseneksi tai tue toimintaa!
             </script>
         </form>
     </li>
-    <li class="membership-item">
-        <div class="payment-type">Puolivuosimaksu</div>
-        <div class="big-text">110€</div>
-        <div class="payment-type">/ 6kk</div>
-        <form action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
-            <script
-                    src="https://checkout.stripe.com/checkout.js"
-                    class="stripe-button"
-                    data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
-                    data-amount="11000"
-                    data-name="Virrat Hacklab"
-                    data-description="Puolivuosimaksu 110€ / 6kk"
-                    data-image="https://raw.githubusercontent.com/VirratHacklab/VirratHacklab.github.io/master/assets/images/hacklab_notext_safety_white.png"
-                    data-locale="fi"
-                    data-zip-code="true"
-                    data-currency="eur"
-                    data-label="Liity"
-            >
-            </script>
-        </form>
-    </li>
-    <li class="membership-item">
-        <div class="payment-type">Kvartaalimaksu</div>
-        <div class="big-text">55€</div>
-        <div class="payment-type">/ 3kk</div>
-        <form action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
-            <script
-                    src="https://checkout.stripe.com/checkout.js"
-                    class="stripe-button"
-                    data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
-                    data-amount="5500"
-                    data-name="Virrat Hacklab"
-                    data-description="Kvartaalimaksu 55€ / 3kk"
-                    data-image="https://raw.githubusercontent.com/VirratHacklab/VirratHacklab.github.io/master/assets/images/hacklab_notext_safety_white.png"
-                    data-locale="fi"
-                    data-zip-code="true"
-                    data-currency="eur"
-                    data-label="Liity"
-            >
-            </script>
-        </form>
-    </li>
-    <li class="membership-item">
-        <div class="payment-type">Kuukausimaksu</div>
-        <div class="big-text">20€</div>
-        <div class="payment-type">/ kk</div>
-        <form action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
-            <script
-                    src="https://checkout.stripe.com/checkout.js"
-                    class="stripe-button"
-                    data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
-                    data-amount="2000"
-                    data-name="Virrat Hacklab"
-                    data-description="Kuukausimaksu 20€ / kk"
-                    data-image="https://raw.githubusercontent.com/VirratHacklab/VirratHacklab.github.io/master/assets/images/hacklab_notext_safety_white.png"
-                    data-locale="fi"
-                    data-zip-code="true"
-                    data-currency="eur"
-                    data-label="Liity"
-            >
-            </script>
-        </form>
-    </li>
 </ul>
 
-<h3>Liity kannattajajäseneksi</h3>
+<p></p>
+
+<h3 class="header-3">Liity kannattajajäseneksi</h3>
 
 <ul class="membership-list">
     <li class="membership-item">
@@ -106,7 +59,7 @@ title: Liity jäseneksi tai tue toimintaa!
                     data-amount="500"
                     data-name="Virrat Hacklab"
                     data-description="Kuukausimaksu 5€ / kk"
-                    data-image="https://raw.githubusercontent.com/VirratHacklab/VirratHacklab.github.io/master/assets/images/hacklab_notext_safety_white.png"
+                    data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
                     data-locale="fi"
                     data-zip-code="true"
                     data-currency="eur"
@@ -127,7 +80,7 @@ title: Liity jäseneksi tai tue toimintaa!
                     data-amount="1000"
                     data-name="Virrat Hacklab"
                     data-description="Kuukausimaksu 10€ / kk"
-                    data-image="https://raw.githubusercontent.com/VirratHacklab/VirratHacklab.github.io/master/assets/images/hacklab_notext_safety_white.png"
+                    data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
                     data-locale="fi"
                     data-zip-code="true"
                     data-currency="eur"
@@ -148,7 +101,7 @@ title: Liity jäseneksi tai tue toimintaa!
                     data-amount="2000"
                     data-name="Virrat Hacklab"
                     data-description="Kuukausimaksu 20€ / kk"
-                    data-image="https://raw.githubusercontent.com/VirratHacklab/VirratHacklab.github.io/master/assets/images/hacklab_notext_safety_white.png"
+                    data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
                     data-locale="fi"
                     data-zip-code="true"
                     data-currency="eur"
@@ -157,7 +110,7 @@ title: Liity jäseneksi tai tue toimintaa!
             </script>
         </form>
     </li>
-    <li class="membership-item">
+    <!-- <li class="membership-item">
         <div class="payment-type">Kuukausimaksu</div>
         <div class="big-text">50€</div>
         <div class="payment-type">/ kk</div>
@@ -169,7 +122,7 @@ title: Liity jäseneksi tai tue toimintaa!
                     data-amount="5000"
                     data-name="Virrat Hacklab"
                     data-description="Kuukausimaksu 50€ / kk"
-                    data-image="https://raw.githubusercontent.com/VirratHacklab/VirratHacklab.github.io/master/assets/images/hacklab_notext_safety_white.png"
+                    data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
                     data-locale="fi"
                     data-zip-code="true"
                     data-currency="eur"
@@ -177,5 +130,7 @@ title: Liity jäseneksi tai tue toimintaa!
             >
             </script>
         </form>
-    </li>
+    </li>-->
 </ul>
+
+<p></p>
