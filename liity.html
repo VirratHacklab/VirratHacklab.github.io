@@ -1,136 +1,256 @@
 ---
-layout: hacklab
-title: Liity jäseneksi tai tue toimintaa!
+layout: join
+title: LIITY
 ---
 
-<h3 class="header-3">Toiminnan tukeminen</h3>
+<div class="notification">
+    <p>
+        Selvitystyö ulko-oven kulkuluvista on vielä käynnissä! Tarvitsemme hieman lisää aikaa
+        kulkulupien järjestelyä varten, joten avainjäsenet joutuvat odottamaan avainta jonkin aikaa.
+    </p>
+</div>
 
-<p>
-    Tällä sivulla voit jatkossa liittyä jäseneksi suoraan maksamalla jäsenmaksun kuukausittain suoraan maksukortilta.
-    Laitamme nämä sivut toimintaan heti, kun toiminta on kunnolla käynnissä. Jos haluat tukea toimintaa jo nyt, liity
-    <a href="(https://www.facebook.com/groups/202668066893777/">Facebook-ryhmään</a> ja kerro halustasi olla mukana!
-</p>
-
-<p>
-    HUOM! Alla olevat maksulinkit eivät vielä toimi vaan ovat siinä odottamassa maksujärjestelmän käyttöönottoa.
-    Otamme kernaasti vastaan palautetta suunnitelluista hinnoista esim. Facebookin kautta.
-</p>
-
-<h3 class="header-3">Liity varsinaiseksi jäseneksi</h3>
+<h3 class="uppercase tk-korolev-compressed">Maksa kerran kuussa tai koko vuosi kerralla!</h3>
 
 <ul class="membership-list">
-    <li class="membership-item">
-        <div class="payment-type">Kuukausimaksu</div>
-        <div class="big-text">15€</div>
-        <div class="payment-type">/ kk</div>
-        <form action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
+    <li class="membership-item corporate">
+        <div class="big-text tk-korolev-compressed">15€ <span class="small">/ kk</span></div>
+        <div class="ribbon">
+            <div class="trophy">🎫</div>
+        </div>
+        <ul class="benefits tk-serenity">
+            <li>-️ Hacklab -jäsenyys</li>
+        </ul>
+        <form class="payment-button" action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
             <script
                 src="https://checkout.stripe.com/checkout.js"
                 class="stripe-button"
                 data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
                 data-amount="1500"
-                data-name="Virrat Hacklab"
-                data-description="Kuukausimaksu 15€ / kk"
+                data-name="Kuukausimaksu 15€ / kk"
+                data-description="Veloitetaan kortilta joka kuukausi"
                 data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
                 data-locale="fi"
                 data-zip-code="true"
                 data-currency="eur"
-                data-label="Liity"
+                data-label="LIITY"
+            >
+            </script>
+        </form>
+    </li>
+    <li class="membership-item corporate">
+        <div class="big-text tk-korolev-compressed">20€ <span class="small">/ kk</span></div>
+        <div class="ribbon">
+            <div class="trophy">🗝</div>
+        </div>
+        <ul class="benefits tk-serenity">
+            <li>-️ Hacklab -jäsenyys</li>
+            <li>-️ Ulko-oven avain</li>
+        </ul>
+        <form class="payment-button" action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
+            <script
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
+                data-amount="2000"
+                data-name="Kuukausimaksu 20€ / kk"
+                data-description="Veloitetaan kortilta joka kuukausi"
+                data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
+                data-locale="fi"
+                data-zip-code="true"
+                data-currency="eur"
+                data-label="LIITY"
+            >
+            </script>
+        </form>
+    </li>
+    <li class="membership-item corporate">
+        <div class="big-text tk-korolev-compressed">175€ <span class="small">/ vuosi</span></div>
+        <div class="ribbon">
+            <div class="trophy">🎫</div>
+        </div>
+        <ul class="benefits tk-serenity">
+            <li>-️ Hacklab -jäsenyys</li>
+            <li>-️ Ulko-oven avain</li>
+        </ul>
+        <form class="payment-button" action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
+            <script
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
+                data-amount="17500"
+                data-name="Vuosimaksu 175€ / vuosi"
+                data-description="Veloitetaan kortilta joka vuosi"
+                data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
+                data-locale="fi"
+                data-zip-code="true"
+                data-currency="eur"
+                data-label="LIITY"
             >
             </script>
         </form>
     </li>
 </ul>
 
-<p></p>
-
-<h3 class="header-3">Liity kannattajajäseneksi</h3>
+<h3 class="uppercase tk-korolev-compressed">Kannattajajäsenenä tuet hyvää toimintaa!</h3>
 
 <ul class="membership-list">
-    <li class="membership-item">
-        <div class="payment-type">Kuukausimaksu</div>
-        <div class="big-text">5€</div>
-        <div class="payment-type">/ kk</div>
-        <form action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
+    <li class="membership-item corporate">
+        <div class="big-text tk-korolev-compressed">2€ <span class="small">/ kk</span></div>
+        <div class="ribbon">
+            <div class="trophy">👍</div>
+        </div>
+        <ul class="benefits tk-serenity">
+            <li>-️ Kannattajajäsenyys</li>
+            <li>-️ Hacklab -heijastin</li>
+        </ul>
+        <form class="payment-button" action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
             <script
-                    src="https://checkout.stripe.com/checkout.js"
-                    class="stripe-button"
-                    data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
-                    data-amount="500"
-                    data-name="Virrat Hacklab"
-                    data-description="Kuukausimaksu 5€ / kk"
-                    data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
-                    data-locale="fi"
-                    data-zip-code="true"
-                    data-currency="eur"
-                    data-label="Liity"
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
+                data-amount="500"
+                data-name="Kuukausimaksu 5€ / kk"
+                data-description="Veloitetaan kortilta joka kuukausi"
+                data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
+                data-locale="fi"
+                data-zip-code="true"
+                data-currency="eur"
+                data-label="LIITY"
             >
             </script>
         </form>
     </li>
-    <li class="membership-item">
-        <div class="payment-type">Kuukausimaksu</div>
-        <div class="big-text">10€</div>
-        <div class="payment-type">/ kk</div>
-        <form action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
+    <li class="membership-item corporate">
+        <div class="big-text tk-korolev-compressed">5€ <span class="small">/ kk</span></div>
+        <div class="ribbon">
+            <div class="trophy">✌️</div>
+        </div>
+        <ul class="benefits tk-serenity">
+            <li>-️ Kannattajajäsenyys</li>
+            <li>-️ Hacklab -heijastin</li>
+        </ul>
+        <form class="payment-button" action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
             <script
-                    src="https://checkout.stripe.com/checkout.js"
-                    class="stripe-button"
-                    data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
-                    data-amount="1000"
-                    data-name="Virrat Hacklab"
-                    data-description="Kuukausimaksu 10€ / kk"
-                    data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
-                    data-locale="fi"
-                    data-zip-code="true"
-                    data-currency="eur"
-                    data-label="Liity"
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
+                data-amount="1000"
+                data-name="Kuukausimaksu 10€ / kk"
+                data-description="Veloitetaan kortilta joka kuukausi"
+                data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
+                data-locale="fi"
+                data-zip-code="true"
+                data-currency="eur"
+                data-label="LIITY"
             >
             </script>
         </form>
     </li>
-    <li class="membership-item">
-        <div class="payment-type">Kuukausimaksu</div>
-        <div class="big-text">20€ </div>
-        <div class="payment-type">/ kk</div>
-        <form action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
+    <li class="membership-item corporate">
+        <div class="big-text tk-korolev-compressed">10€ <span class="small">/ kk</span></div>
+        <div class="ribbon">
+            <div class="trophy">💪</div>
+        </div>
+        <ul class="benefits tk-serenity">
+            <li>-️ Kannattajajäsenyys</li>
+            <li>-️ Hacklab -heijastin</li>
+        </ul>
+        <form class="payment-button" action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
             <script
-                    src="https://checkout.stripe.com/checkout.js"
-                    class="stripe-button"
-                    data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
-                    data-amount="2000"
-                    data-name="Virrat Hacklab"
-                    data-description="Kuukausimaksu 20€ / kk"
-                    data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
-                    data-locale="fi"
-                    data-zip-code="true"
-                    data-currency="eur"
-                    data-label="Liity"
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
+                data-amount="2000"
+                data-name="Kuukausimaksu 20€ / kk"
+                data-description="Veloitetaan kortilta joka kuukausi"
+                data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
+                data-locale="fi"
+                data-zip-code="true"
+                data-currency="eur"
+                data-label="LIITY"
             >
             </script>
         </form>
     </li>
-    <!-- <li class="membership-item">
-        <div class="payment-type">Kuukausimaksu</div>
-        <div class="big-text">50€</div>
-        <div class="payment-type">/ kk</div>
-        <form action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
-            <script
-                    src="https://checkout.stripe.com/checkout.js"
-                    class="stripe-button"
-                    data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
-                    data-amount="5000"
-                    data-name="Virrat Hacklab"
-                    data-description="Kuukausimaksu 50€ / kk"
-                    data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
-                    data-locale="fi"
-                    data-zip-code="true"
-                    data-currency="eur"
-                    data-label="Liity"
-            >
-            </script>
-        </form>
-    </li>-->
 </ul>
 
-<p></p>
+<h3 class="uppercase tk-korolev-compressed">Yritykset, emme unohtaneet teitä!</h3>
+
+<ul class="membership-list">
+    <li class="membership-item corporate bronze">
+        <div class="big-text tk-korolev-compressed">200€ <span class="small">/ vuosi</span></div>
+        <div class="ribbon">
+            <div class="trophy">🥉</div>
+        </div>
+        <ul class="benefits tk-serenity">
+            <li>-️ Kannattajajäsenyys</li>
+        </ul>
+        <form class="payment-button" action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
+            <script
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
+                data-amount="20000"
+                data-name="Vuosimaksu 200€ / vuosi"
+                data-description="Veloitetaan kortilta joka vuosi"
+                data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
+                data-locale="fi"
+                data-zip-code="true"
+                data-currency="eur"
+                data-label="LIITY"
+            >
+            </script>
+        </form>
+    </li>
+    <li class="membership-item corporate silver">
+        <div class="big-text tk-korolev-compressed">350€ <span class="small">/ vuosi</span></div>
+        <div class="ribbon">
+            <div class="trophy">🥈</div>
+        </div>
+        <ul class="benefits tk-serenity">
+            <li>-️ Kannattajajäsenyys</li>
+        </ul>
+        <form class="payment-button" action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
+            <script
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
+                data-amount="35000"
+                data-name="Vuosimaksu 350€ / vuosi"
+                data-description="Veloitetaan kortilta joka vuosi"
+                data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
+                data-locale="fi"
+                data-zip-code="true"
+                data-currency="eur"
+                data-label="LIITY"
+            >
+            </script>
+        </form>
+    </li>
+    <li class="membership-item corporate gold">
+        <div class="big-text tk-korolev-compressed">500€ <span class="small">/ vuosi</span></div>
+        <div class="ribbon">
+            <div class="trophy">🥇</div>
+        </div>
+        <ul class="benefits tk-serenity">
+            <li>-️ Kannattajajäsenyys</li>
+        </ul>
+        <form class="payment-button" action="https://i69chrxdh2.execute-api.eu-west-1.amazonaws.com/development/subscribe" method="POST">
+            <script
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_hYicyiRKP4O6RFj6xPlY6XCJ"
+                data-amount="50000"
+                data-name="Vuosimaksu 500€ / vuosi"
+                data-description="Veloitetaan kortilta joka vuosi"
+                data-image="https://virrat.hacklab.fi/assets/images/hacklab_notext_safety_white.png"
+                data-locale="fi"
+                data-zip-code="true"
+                data-currency="eur"
+                data-label="LIITY"
+            >
+            </script>
+        </form>
+    </li>
+</ul>

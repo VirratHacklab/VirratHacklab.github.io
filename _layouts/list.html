@@ -1,0 +1,123 @@
+<!doctype html>
+<!-- Based on theme designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<html lang="{{ site.lang | default: "fi-FI" }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <link rel="shortcut icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+
+        <script src="https://use.typekit.net/drz2eor.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+        <link rel="stylesheet" href="{{ '/assets/css/reset.css?v=' | append: site.github.build_revision | relative_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/hacklab.css?v=' | append: site.github.build_revision | relative_url }}">
+        <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+        <!-- <script type="text/javascript" src="{{ '/assets/js/script.js' | relative_url }}"></script> -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <title>Virrat Hacklab - {{ page.title | default: site.title }}</title>
+        <meta name="description" content="{{ page.excerpt | strip_html | truncatewords:50 | default: site.description }}">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta property="og:image" content="{{ page.hero_image | prepend: 'https://virrat.hacklab.fi' | default: 'https://virrat.hacklab.fi/assets/images/share_logo.png' }}" />
+        <meta property="og:title" content="Virrat Hacklab - {{ page.title | default: site.title }}" />
+        <meta property="og:url" content="{{ page.url | prepend: 'https://virrat.hacklab.fi' }}" />
+        <meta property="og:site_name" content="Virrat Hacklab" />
+        <meta property="og:type" content="article" />
+    </head>
+
+    <body>
+        <header id="header">
+            <a class="menulink" href="#navigation">
+                <div class="hamburger"></div>
+            </a>
+            <div class="header-logo-container">
+                <a class="header-logo-link" href="/">
+                    <img src="{{ 'assets/images/logo.png' | relative_url }}" class="header-logo" height="56" />
+                </a>
+            </div>
+        </header>
+
+        <div class="hero-background"></div>
+
+        <div id="article-container">
+            <div id="main" role="main">
+                <article class="markdown-body">
+                    <h1 class="article-header tk-korolev-compressed">{{ page.title }}</h1>
+                    {% if page.hero_image %}
+                        <img class="article-hero-image" src="{{ page.hero_image }}" width="100%" />
+                    {% elsif page.small_hero_image %}
+                        <img class="small-article-hero-image" src="{{ page.small_hero_image }}" width="20%" />
+                    {% endif %}
+                    {{ content }}
+                    <ul class="articles">
+                        {% for post in site.posts %}
+                            {% assign pageParts = page.url | split:'/' %}
+                            {% assign htmlCheck = pageParts[1] | split:'.' %}
+                            {% if post.categories and post.categories contains htmlCheck[0] %}
+                                <li class="article {{ post.categories }}">
+                                    <a class="article-link" href="{{ post.url }}">
+                                        <div class="article-link-text tk-korolev-compressed">
+                                            <div class="article-published">{{ post.date | date: "%d.%m.%Y %R" }}</div>
+                                            {{ post.title }}
+                                        </div>
+                                    </a>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% if page.comments %}
+                    <h3 class="comments-header tk-korolev-compressed">KESKUSTELE AIHEESTA:</h3>
+                    <div class="comments">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            var disqus_config = function () {
+                                this.page.url = 'https://virrat.hacklab.fi';  // Replace PAGE_URL with your page's canonical URL variable
+                                this.page.identifier = 'virrat-hacklab'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                            };
+                            (function() { // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+                                s.src = 'https://virrat-hacklab.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    </div>
+                    {% endif %}
+                </article>
+            </div>
+        </div>
+        <footer id="footer">
+            <nav id="navigation" class="tk-korolev-compressed">
+                <ul class="navigation-items">
+                    {% assign pagesList = site.pages | sort: "weight" %}
+                    {% assign group = 'navigation' %}
+                    {% include pagesList %}
+                </ul>
+                <hr />
+            </nav>
+
+            {% include sponsors.html %}
+
+            <hr/>
+
+            {% include social.html %}
+
+        </footer>
+
+        {% if site.google_analytics %}
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', '{{ site.google_analytics }}', 'auto');
+            ga('send', 'pageview');
+        </script>
+        {% endif %}
+
+    </body>
+</html>

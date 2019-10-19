@@ -1,0 +1,170 @@
+<!doctype html>
+<!-- Based on theme designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<html lang="{{ site.lang | default: "fi-FI" }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <link rel="shortcut icon" href="{{ '/assets/images/favicon.png' | relative_url }}">
+
+        <script src="https://use.typekit.net/drz2eor.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+        <link rel="stylesheet" href="{{ '/assets/css/reset.css?v=' | append: site.github.build_revision | relative_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/hacklab.css?v=' | append: site.github.build_revision | relative_url }}">
+        <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+        <!-- <script type="text/javascript" src="{{ '/assets/js/script.js' | relative_url }}"></script> -->
+
+        <title>Virrat Hacklab - {{ page.title | default: site.title }}</title>
+        <meta name="description" content="{{ page.description | default: site.description }}">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <meta property="og:image" content="https://virrat.hacklab.fi/assets/images/share_logo.png" />
+        <meta property="og:title" content="Virrat Hacklab - {{ page.title | default: site.title }}" />
+        <meta property="og:url" content="{{ page.url | prepend: 'https://virrat.hacklab.fi' }}" />
+        <meta property="og:site_name" content="Virrat Hacklab" />
+        <meta property="og:type" content="article" />
+    </head>
+
+    <body>
+        <header id="header">
+            <a class="menulink" href="#navigation">
+                <div class="hamburger"></div>
+            </a>
+            <div class="header-logo-container">
+                <a class="header-logo-link" href="/">
+                    <img src="{{ 'assets/images/logo.png' | relative_url }}" class="header-logo" height="56" />
+                </a>
+            </div>
+        </header>
+
+        {% assign heroPost = nil %}
+
+        {% for post in site.posts %}
+            {% if post.hero == true %}
+                {% assign heroPost = post %}
+            {% endif %}
+        {% endfor %}
+
+        {% if heroPost %}
+            <div class="hero-background" style="background-image: url({{ heroPost.hero_image }});" ></div>
+        {% else %}
+        <div class="hero-background"></div>
+        {% endif %}
+        <div class="hero">
+            {% if heroPost != nil %}
+                <div class="publisher-container">
+                    <div class="publisher-frame" style="background-image: url({{ heroPost.publisher | prepend: site.publisher_path | append: '.png' | replace: ' ', '_' }});">
+                    </div>
+                    <div class="publisher-name tk-korolev-compressed">{{ heroPost.publisher }}</div>
+                    <div class="publish-date tk-korolev-compressed">Julkaisi: {{ heroPost.date | date: "%d.%m.%Y %R" }}</div>
+                </div>
+                <div class="what">
+                    <h2 class="what-header">
+                        <a href="{{ heroPost.url }}">{{ heroPost.title }}</a>
+                    </h2>
+                    <p class="what-content">
+                        {{ heroPost.excerpt | remove: '<p>' | remove: '</p>' }}
+                    </p>
+                    <a class="tk-korolev-compressed button join" href="{{ heroPost.url }}">
+                        LUE LISÄÄ
+                    </a>
+                </div>
+            {% else %}
+                <div class="logo-container">
+                    <img src="{{ 'assets/images/logo.png' | relative_url }}" class="logo" height="250" />
+                </div>
+                <div class="what">
+                    <h2 class="what-header">Mikä ihmeen Hacklab?</h2>
+                    <p class="what-content">
+                        Hacklab on tila jossa jäsenet voivat toteuttaa omia projektejaan tiloihin yhteiskäyttöön hankituilla
+                        välineillä. Yleensä laboratorioilla on omat tilat puun, metallin ja elektroniikan parissa työskentelyä
+                        varten.
+                    </p>
+                    <a class="tk-korolev-compressed button join" href="/liity.html">
+                        LIITY TAI TUE
+                    </a>
+                </div>
+            {% endif %}
+            </div>
+        </div>
+        <div id="recent">
+            <h2 class="recent-header tk-korolev-compressed">AJANKOHTAISTA</h2>
+            <ul class="articles">
+                {% for post in site.posts limit:5 %}
+                    <li class="article {{ post.categories }}">
+                        {% if post.hero_image %}
+                            <a class="article-link" href="{{ post.url }}" style="background-image: url({{ post.hero_image }})">
+                        {% else if post.small_hero_image %}
+                            <a class="article-link" href="{{ post.url }}" style="background-image: url({{ post.small_hero_image }})"></a>
+                        {% endif %}
+                            <div class="article-link-text tk-korolev-compressed">{{ post.title }}</div>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="where">
+            <ul class="where-cards">
+                <li class="card">
+                    <h2 class="where-header tk-korolev-compressed">MIKÄ?</h2>
+                    <p class="where-content size-medium">
+                        Hacklab on yhteisöllinen työpaja, jossa jäsenet voivat tehdä omia projektejaan yhteiskäyttöön hankituilla välineillä
+                    </p>
+                </li>
+                <li class="card">
+                    <h2 class="where-header tk-korolev-compressed">MISSÄ?</h2>
+                    <p class="where-content size-medium">
+                        Virrat Hacklab sijaitsee Tredun alakerrassa osoitteessa Sipiläntie 1. Pariovien päällä iso valaistu kyltti!
+                    </p>
+                </li>
+                <li class="card">
+                    <h2 class="where-header tk-korolev-compressed">LIITY!</h2>
+                    <p class="where-content size-medium">
+                        Lähetä vapaamuotoinen jäsenhakemus sähköpostiin osoitteeseen <a href="mailto:info@virrat.hacklab.fi">info@virrat.hacklab.fi</a><br />
+                        <br />
+                        Jäsenmaksu: 175&euro; / vuosi
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div id="map"></div>
+        <div id="container">
+            <div id="main" role="main">
+                <article class="markdown-body">
+                    {{ content }}
+                </article>
+            </div>
+        </div>
+        <footer id="footer">
+            <nav id="navigation" class="tk-korolev-compressed">
+                <ul class="navigation-items">
+                    {% assign pagesList = site.pages | sort: "weight" %}
+                    {% assign group = 'navigation' %}
+                    {% include pagesList %}
+                </ul>
+                <hr />
+            </nav>
+
+            {% include sponsors.html %}
+
+            <hr/>
+
+            {% include social.html %}
+
+        </footer>
+
+        {% if site.google_analytics %}
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', '{{ site.google_analytics }}', 'auto');
+            ga('send', 'pageview');
+        </script>
+        {% endif %}
+
+    </body>
+</html>
