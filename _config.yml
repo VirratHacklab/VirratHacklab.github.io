@@ -1,9 +1,9 @@
-theme: jekyll-theme-time-machine
+#theme: jekyll-theme-time-machine
 url: "https://virrat.hacklab.fi"
 title: "Virrat Hacklab"
 description: "Hacklab on tila jossa jäsenet voivat toteuttaa omia projektejaan tiloihin yhteiskäyttöön hankituilla välineillä."
 excerpt_separator: <!--more-->
 publisher_path: "/assets/images/publishers/"
-gems:
+plugins:
   - jekyll-feed
 ---
