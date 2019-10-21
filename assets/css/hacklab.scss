@@ -733,6 +733,16 @@ hr {
             }
         }
     }
+
+    #where {
+        .where-cards {
+            .card {
+                display: block;
+                width: auto;
+            }
+        }
+    }
+
     #article-container {
         margin-top: 4.5em;
         #main {
